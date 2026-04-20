@@ -1,0 +1,7 @@
+# Archivos binarios y objetos
+*.bin
+*.o
+
+# Carpeta build (excepto .gitkeep)
+build/*
+!build/.gitkeep
