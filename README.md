@@ -1,2 +1,0 @@
-# INFB6074-infra
-actividades de "INFRAESTRUCTURA PARA CIENCIA DE DATOS"
