@@ -1,3 +1,9 @@
 .venv/
 __pycache__/
 *.pyc
+# Archivos específicos de uv (no estándar)
+.python-version
+uv.lock
+pyproject.toml
+.DS_Store
+Thumbs.db
