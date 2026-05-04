@@ -7,7 +7,9 @@ import matplotlib
 from pathlib import Path
 import seaborn as sns
 import dask
-
+import scipy  
+import faker     
+import pyarrow   
 def get_processor_info():
     """Obtiene info del procesador (Mac muestra info más detallada)"""
     sistema = platform.system()
@@ -73,6 +75,8 @@ env_info = {
     "psutil": psutil.__version__,
     "Seaborn": sns.__version__,
     "Dask": dask.__version__,
+    "SciPy": scipy.__version__,
+    "PyArrow": pyarrow.__version__,
     "Directorio de trabajo": str(Path.cwd().resolve().name)
 }
 
