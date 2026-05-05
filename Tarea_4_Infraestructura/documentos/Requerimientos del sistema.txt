@@ -1,0 +1,14 @@
+numpy==2.4.4
+pandas==3.0.2
+pyarrow==22.0.0
+Python==3.13.7
+
+sistema operativo: windows 11
+RAM: 16 GB
+Espacio en disco: 215 GB
+Tamaño Archivo: 485 MB
+Numero de filas: 10 000 000
+Numero de columnas: 7
+Formato del Archivo: CSV
+Formato generados: Parquet
+Tamaño Chunksize: 10 000
