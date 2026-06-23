@@ -5,28 +5,56 @@ services:
     ports:
       - "6379:6379"
     command: ["redis-server", "--appendonly", "yes"]
-    volumes:
-      - redis-data:/data
+
     healthcheck:
       test: ["CMD", "redis-cli", "ping"]
       interval: 5s
       timeout: 3s
       retries: 10
 
+    volumes:
+      - redis-data:/data
+
   worker:
     build:
       context: ./worker
+
     environment:
       - REDIS_HOST=redis
       - REDIS_PORT=6379
       - REDIS_DB=0
       - REDIS_QUEUE=training_queue
       - MODEL_DIR=/models
+      - MODEL_HOST_PREFIX=./models
+
     volumes:
       - ./models:/models
+
     depends_on:
       redis:
         condition: service_healthy
+
+    restart: unless-stopped
+
+  xgboost-worker:
+    build:
+      context: ./xgboost_worker
+
+    environment:
+      - REDIS_HOST=redis
+      - REDIS_PORT=6379
+      - REDIS_DB=0
+      - REDIS_QUEUE=xgboost_queue
+      - MODEL_DIR=/models
+      - MODEL_HOST_PREFIX=./models
+
+    volumes:
+      - ./models:/models
+
+    depends_on:
+      redis:
+        condition: service_healthy
+
     restart: unless-stopped
 
 volumes:
