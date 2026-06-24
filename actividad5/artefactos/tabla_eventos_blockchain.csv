@@ -1,0 +1,7 @@
+indice,paso,actor,timestamp,hash_input,hash_output,hash_previo,hash_bloque,resultado_validacion
+0,inicio_auditoria_pipeline_ml,—,2026-06-23 17:38:05,—,—,0,9c4c750b34363c39...,válida
+1,ingesta_dataset_bruto,pipeline_etl,2026-06-23 17:38:05,—,0ba79ae755c686ee...,9c4c750b34363c39...,ad4f26b63a11693b...,válida
+2,limpieza,notebook_07,2026-06-23 17:38:05,0ba79ae755c686ee...,f314cc94fd6dab9f...,ad4f26b63a11693b...,93a577173ee67145...,válida
+3,features,notebook_07,2026-06-23 17:38:05,f314cc94fd6dab9f...,3c4445a5a61e644a...,93a577173ee67145...,df30ead1aeee893a...,válida
+4,entrenamiento,trainer_script,2026-06-23 17:38:05,3c4445a5a61e644a...,2ffa98062ed27d41...,df30ead1aeee893a...,ef6d33e64359ee07...,válida
+5,validacion_reporte,trainer_script,2026-06-23 17:38:05,2ffa98062ed27d41...,024fbde22bf4fe51...,ef6d33e64359ee07...,d947e3cba22ea803...,válida

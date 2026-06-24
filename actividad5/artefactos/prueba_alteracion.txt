@@ -1,0 +1,11 @@
+PRUEBA DE ALTERACIÓN CONTROLADA
+================================
+
+Se alteró manualmente el bloque 3, correspondiente al paso de features.
+El bloque 4 conserva el hash previo original del bloque 3.
+
+Cadena original válida: True
+Cadena alterada válida: False
+
+Hash recalculado del bloque 3 alterado: f008bfb1559ee6d2c306258ccd23b0ad83005664559cb571f44de393cbe2f120
+Hash previo guardado en bloque 4: df30ead1aeee893a4281115dc5565d8a62977031fd613fb1ec259c6a7a6a891c
